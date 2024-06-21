@@ -23,7 +23,7 @@ export const AvatarMenu: React.FC = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative p-5">
       <UserIconButton onClick={toggleMenu} photoURL={currentUser?.photoURL} />
       {isOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
