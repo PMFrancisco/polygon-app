@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import { useAuth } from "../../context/AuthProvider";
-import { UserMenuButton } from "../molecules/UserMenuButton";
-import { UserIconButton } from "../molecules/UserIconButton";
+import { UserMenuButton } from "../molecules/buttons/UserMenuButton";
+import { UserIconButton } from "../molecules/buttons/UserIconButton";
 
 export const AvatarMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

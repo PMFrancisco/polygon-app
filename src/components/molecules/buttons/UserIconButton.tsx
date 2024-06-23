@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from '../atoms/Button';
-import { AvatarIcon } from '../atoms/AvatarIcon';
+import { Button } from '../../atoms/Button';
+import { AvatarIcon } from '../../atoms/AvatarIcon';
 
 interface UserIconButtonProps {
   onClick: () => void;

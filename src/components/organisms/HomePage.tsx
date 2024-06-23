@@ -1,5 +1,7 @@
-export const HomePage = () => {
+import { PremiumBanner } from "../molecules/PremiumBanner"
+
+export const HomePage: React.FC = () => {
   return (
-    <div>HomePage</div>
+    <PremiumBanner />
   )
 }

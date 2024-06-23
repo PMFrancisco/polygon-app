@@ -6,7 +6,7 @@ interface IconProps {
 
 export const AvatarIcon: React.FC<IconProps> = ({ photoURL }) => (
   photoURL ? (
-    <img src={photoURL} alt="User Avatar" className="rounded-full w-10 h-10" />
+    <img src={photoURL} alt="User Avatar" className="rounded-full min-w-10 h-10 flex justify-center" />
   ) : (
     <UserIcon className="bg-white rounded-full w-10 h-10 flex justify-center" />
   )
