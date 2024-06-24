@@ -15,12 +15,16 @@ export const UploadButton: React.FC = () => {
     setIsModalOpen(false);
   };
 
-  const handleSubmit = (formData: { title: string; author: string; album: string }) => {
+  const handleSubmit = (formData: {
+    title: string;
+    author: string;
+    album: string;
+  }) => {
     try {
       addDoc(collection(db, "Music"), {
-        formData
+        formData,
       });
-      console.log("Data del formulario:", formData); // Fix the spelling of "Datos" to "Data"
+      console.log("Data del formulario:", formData);
       handleCloseModal();
     } catch (e) {
       console.error("error", e);
@@ -35,7 +39,11 @@ export const UploadButton: React.FC = () => {
       >
         Subir obra
       </Button>
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal} onSubmit={handleSubmit} />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        onSubmit={handleSubmit}
+      />
     </>
   );
 };
