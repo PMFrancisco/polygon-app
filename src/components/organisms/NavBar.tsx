@@ -5,8 +5,8 @@ import { NavMenu } from "./NavMenu";
 
 export const NavBar: React.FC = () => {
   return (
-    <div className="flex items-center h-20">
-      <img className="p-5" src="\images\polygonLogo.png" alt="an infinity symbol made with hexagons in color purple, followed by the name of the app, polygon" />
+    <div className="mx-10 flex items-center h-20">
+      <img className="py-5" src="\images\polygonLogo.png" alt="an infinity symbol made with hexagons in color purple, followed by the name of the app, polygon" />
       <SearchBar />
       <NavMenu />
       <UploadButton />

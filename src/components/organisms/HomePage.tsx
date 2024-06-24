@@ -1,7 +1,10 @@
-import { PremiumBanner } from "../molecules/PremiumBanner"
+import { Highlights } from "./Highlights"
+import { PremiumBanner } from "./PremiumBanner"
 
 export const HomePage: React.FC = () => {
-  return (
+  return (<>
     <PremiumBanner />
+    <Highlights />
+    </>
   )
 }

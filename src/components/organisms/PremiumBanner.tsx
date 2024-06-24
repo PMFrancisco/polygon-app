@@ -1,4 +1,4 @@
-import { PremiumMembership } from "./PremiumMembership";
+import { PremiumMembership } from "../molecules/PremiumMembership";
 
 export const PremiumBanner: React.FC = () => {
   return (
