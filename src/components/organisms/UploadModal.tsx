@@ -83,7 +83,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div className="z-50 fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
       <div className="bg-white p-8 rounded shadow-lg relative">
         <button onClick={onClose} className="absolute top-2 right-2">
           &times;

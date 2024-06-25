@@ -1,21 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
+import { useSearch } from "../../context/SearchContext";
 
 export const SearchBar: React.FC = () => {
-  const [query, setQuery] = useState("");
+  const { query, setQuery } = useSearch();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
-  };
-
-  const handleSearch = () => {
-    console.log("Searching for:", query);
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      handleSearch();
-    }
   };
 
   return (
@@ -25,8 +16,7 @@ export const SearchBar: React.FC = () => {
           type="text"
           value={query}
           onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
-          className="border rounded-full w-full px-4 py-2 bg-[#1C141E] text-sm text-white  pl-10"
+          className="border rounded-full w-full px-4 py-2 bg-[#1C141E] text-sm text-white pl-10"
           placeholder="Search Item, Collection and Account..."
         />
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">

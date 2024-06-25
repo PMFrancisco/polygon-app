@@ -17,6 +17,16 @@ export const AvatarMenu: React.FC = () => {
     const provider = new GoogleAuthProvider();
     try {
       await signInWithPopup(auth, provider);
+      setIsOpen(false);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      setIsOpen(false);
     } catch (error) {
       console.error(error);
     }
@@ -28,7 +38,7 @@ export const AvatarMenu: React.FC = () => {
       {isOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
           {currentUser ? (
-            <UserMenuButton onClick={logout}>Logout</UserMenuButton>
+            <UserMenuButton onClick={handleLogout}>Logout</UserMenuButton>
           ) : (
             <UserMenuButton onClick={handleGoogleLogin}>
               Login with Google

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../config/firebase";
 import { WorkListItem } from "../molecules/WorkListItem";
+import { useSearch } from "../../context/SearchContext";
 
 interface FormData {
   author: string;
@@ -15,6 +16,8 @@ interface FormData {
 
 export const WorkList: React.FC = () => {
   const [formDataList, setFormDataList] = useState<FormData[]>([]);
+  const [focusedIndex, setFocusedIndex] = useState<number | null>(null);
+  const { query } = useSearch();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,11 +36,23 @@ export const WorkList: React.FC = () => {
     fetchData();
   }, []);
 
+  const filteredFormDataList = formDataList.filter(
+    (formData) =>
+      formData.uploader.toLowerCase().includes(query.toLowerCase()) ||
+      formData.author.toLowerCase().includes(query.toLowerCase()) 
+  );
+
   return (
     <div className="text-white">
       <ul className="flex flex-wrap gap-4">
-        {formDataList.map((formData, index) => (
-          <WorkListItem key={index} formData={formData} />
+        {filteredFormDataList.map((formData, index) => (
+          <WorkListItem
+            key={index}
+            formData={formData}
+            isFocused={focusedIndex === index}
+            onFocus={() => setFocusedIndex(index)}
+            onBlur={() => setFocusedIndex(null)}
+          />
         ))}
       </ul>
     </div>
