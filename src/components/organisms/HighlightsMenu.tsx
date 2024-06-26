@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MenuButton } from "../molecules/buttons/MenuButton";
 
 export const HighlightsMenu: React.FC = () => {

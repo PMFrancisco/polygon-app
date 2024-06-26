@@ -32,7 +32,7 @@ export const UploadButton: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="hidden md:flex">
       <Button
         onClick={handleClick}
         className="bg-[#7855DC] text-white px-6 py-2 m-2 rounded-full whitespace-nowrap"
@@ -44,6 +44,6 @@ export const UploadButton: React.FC = () => {
         onClose={handleCloseModal}
         onSubmit={handleSubmit}
       />
-    </>
+    </div>
   );
 };

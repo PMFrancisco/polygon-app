@@ -4,7 +4,7 @@ import { SubscribeButton } from "./buttons/SubscribeButton";
 
 export const PremiumMembership: React.FC = () => {
   return (
-    <div className="flex flex-col gap-6 ml-20">
+    <div className="flex flex-col gap-6 ml-6 md:ml-20">
       <Text
         as="h1"
         variant="PremiumBannerHeader"
@@ -14,7 +14,7 @@ export const PremiumMembership: React.FC = () => {
         <br />
         Premium
       </Text>
-      <div className="flex gap-4 items-center">
+      <div className="flex gap-2 md:gap-4 items-center">
         <SubscribeButton />
         <PlansButton />
       </div>

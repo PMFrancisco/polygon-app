@@ -10,7 +10,7 @@ export const SearchBar: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center p-4 w-full">
+    <div className="hidden md:flex items-center justify-center p-4 w-full">
       <div className="relative w-full">
         <input
           type="text"

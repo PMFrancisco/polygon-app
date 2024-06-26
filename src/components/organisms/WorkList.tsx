@@ -43,8 +43,8 @@ export const WorkList: React.FC = () => {
   );
 
   return (
-    <div className="text-white">
-      <ul className="flex flex-wrap gap-4">
+    <div className="text-white h-96 overflow-x-auto scrollbar-custom">
+      <ul className="flex flex-start gap-4">
         {filteredFormDataList.map((formData, index) => (
           <WorkListItem
             key={index}

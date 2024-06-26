@@ -5,3 +5,22 @@
 body {
     @apply bg-black min-h-screen;
   }
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background-color: #211626;
+  border-radius: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #54399f85;
+  border-radius: 8px;
+  border: 2px solid #211626;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background-color: #54399ff8;
+}

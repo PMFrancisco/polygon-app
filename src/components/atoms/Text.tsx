@@ -13,7 +13,7 @@ export const Text: React.FC<TextProps> = ({ children, variant, as = "p", classNa
   const baseClass = "Raleway";
   const variantClasses = {
     NavBarButtons: "text-base font-semibold",
-    PremiumBannerHeader: "text-6xl font-bold",
+    PremiumBannerHeader: "text-5xl font-bold md:text-6xl",
     Highlights: "text-2xl font-bold",
     SRegular: "text-xs"
   };
