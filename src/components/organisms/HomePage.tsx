@@ -3,10 +3,13 @@ import { PremiumBanner } from "./PremiumBanner"
 import { WorkList } from "./WorkList"
 
 export const HomePage: React.FC = () => {
-  return (<>
-    <PremiumBanner />
-    <Highlights />
-    <WorkList />
-    </>
-  )
-}
+  return (
+    <div className="flex justify-center">
+      <div className="min-w-lg max-w-[1024px] px-8">
+        <PremiumBanner />
+        <Highlights />
+        <WorkList />
+      </div>
+    </div>
+  );
+};

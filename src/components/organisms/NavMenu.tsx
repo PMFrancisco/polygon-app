@@ -10,7 +10,7 @@ export const NavMenu: React.FC = () => {
 
   return (
     <div className="hidden lg:flex space-x-1">
-      {["Home", "Descubrir", "Favoritos"].map((buttonName) => (
+      {["Inicio", "Descubrir", "Favoritos"].map((buttonName) => (
         <MenuButton
           key={buttonName}
           onClick={() => handleButtonClick(buttonName)}

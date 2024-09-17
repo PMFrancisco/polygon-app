@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MenuButton } from "../molecules/buttons/MenuButton";
 
 export const HighlightsMenu: React.FC = () => {
-  const [selectedButton, setSelectedButton] = useState("Music");
+  const [selectedButton, setSelectedButton] = useState("Canción");
 
   const handleButtonClick = (buttonName: string) => {
     setSelectedButton(buttonName);
@@ -10,7 +10,7 @@ export const HighlightsMenu: React.FC = () => {
 
   return (
     <div className="flex space-x-1">
-      {["Music", "Collectibles", "Utility"].map((buttonName) => (
+      {["Canción", "Discos"].map((buttonName) => (
         <MenuButton
           key={buttonName}
           onClick={() => handleButtonClick(buttonName)}
