@@ -8,6 +8,7 @@ export const PremiumBanner: React.FC = () => {
         src="/images/PremiumBannerImage.svg"
         alt="A Black woman with closed eyes, listening to music with headphones and looking concentrated"
         className="h-full object-cover"
+        loading="lazy"
       />
     </div>
   );
